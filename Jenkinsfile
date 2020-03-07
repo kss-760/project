@@ -1,7 +1,7 @@
 node
 {
     def mavenhome = tool name: "maven"
-    properties([pipelineTriggers([pollSCM('* * * * *')])])
+    properties([pipelineTriggers([cron('* * * * *')])])
     stage('git')
     {
         git branch: 'develop', credentialsId: 'b4931b28-7b90-4c8a-8ccc-135725dd32b7', url: 'https://github.com/kss-760/flipkart.git'
