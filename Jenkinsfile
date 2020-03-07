@@ -1,6 +1,7 @@
 node
 {
     def mavenhome = tool name: "maven"
+    pollscm "properties([pipelineTriggers([pollSCM('* * * * *')])])"
     stage('git')
     {
         git branch: 'develop', credentialsId: 'b4931b28-7b90-4c8a-8ccc-135725dd32b7', url: 'https://github.com/kss-760/flipkart.git'
@@ -31,8 +32,4 @@ node
 Regards,
 Kishore.''', subject: 'build status', to: 'kishoreyuva50@gmail.com,kishoreyuva760@gmail.com,kishoreyuva6049@gmail.com'
     }
-    stage('scmpoll')
-    {
-        sh "properties([pipelineTriggers([pollSCM('* * * * *')])])"
-    }
-}
+   }
