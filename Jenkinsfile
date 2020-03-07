@@ -1,5 +1,6 @@
 node
 {
+   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '4')), pipelineTriggers([githubPush()])])
     properties([pipelineTriggers([githubPush()])])
     def mavenhome = tool name: "maven"
     stage('git')
