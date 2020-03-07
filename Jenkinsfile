@@ -1,6 +1,7 @@
 node
 {
     def mavenhome = tool name: "maven"
+    properties([pipelineTriggers([pollSCM('* * * * *')])])
     Poll SCM "properties([pipelineTriggers([pollSCM('* * * * *')])])"
     stage('git')
     {
