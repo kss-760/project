@@ -1,5 +1,6 @@
 node
 {
+    properties([pipelineTriggers([githubPush()])])
     def mavenhome = tool name: "maven"
     stage('git')
     {
