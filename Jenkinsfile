@@ -1,7 +1,7 @@
 node
 {
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '6')), pipelineTriggers([githubPush()])])
-       def mavenhome = tool name: "maven"
+       def mavenhome = tool name: "maven 3.6.3"
     stage('git')
     {
         git branch: 'develop', credentialsId: 'b4931b28-7b90-4c8a-8ccc-135725dd32b7', url: 'https://github.com/kss-760/flipkart.git'
