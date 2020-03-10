@@ -18,6 +18,7 @@ node
     {
         sh "$mavenhome/bin/mvn deploy"
     }
+   /*
     stage('deploytomcat')
     {
         sshagent(['a48409b5-bda8-40d5-a6fb-a7acd69ba9a0']) 
@@ -31,5 +32,5 @@ node
 
 Regards,
 Kishore.''', subject: 'build status', to: 'kishoreyuva50@gmail.com,kishoreyuva760@gmail.com,kishoreyuva6049@gmail.com'
-    }
+    } */
    }
