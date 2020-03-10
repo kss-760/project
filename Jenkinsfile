@@ -19,12 +19,11 @@ node
     {
         sh "$mavenhome/bin/mvn deploy"
     }
-   /*
     stage('deploytomcat')
     {
         sshagent(['a48409b5-bda8-40d5-a6fb-a7acd69ba9a0']) 
         {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.248.115:/opt/apache-tomcat-9.0.31/webapps/"
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@52.66.203.165:/opt/apache-tomcat-9.0.31/webapps/"
 }
     }
     stage('emailnotification')
@@ -33,5 +32,5 @@ node
 
 Regards,
 Kishore.''', subject: 'build status', to: 'kishoreyuva50@gmail.com,kishoreyuva760@gmail.com,kishoreyuva6049@gmail.com'
-    } */
+    } 
    }
