@@ -10,7 +10,7 @@ node
     {
         sh "$mavenhome/bin/mvn clean package"
     }
- 
+ /*
     stage('sonarqube')
     {
         sh "$mavenhome/bin/mvn sonar:sonar"
@@ -32,5 +32,5 @@ node
 
 Regards,
 Kishore.''', subject: 'build status', to: 'kishoreyuva50@gmail.com,kishoreyuva760@gmail.com,kishoreyuva6049@gmail.com'
-    } 
+    } */ 
    }
